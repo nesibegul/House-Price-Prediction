@@ -1,6 +1,7 @@
 
 import pickle
 import json
+import os
 
 
 from flask import Flask, request, app, jsonify, url_for, render_template
@@ -39,4 +40,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True, port=os.environ['PORT'])
